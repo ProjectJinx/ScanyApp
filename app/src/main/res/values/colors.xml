@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ea986d</color>
+    <color name="colorPrimaryDark">#ea836d</color>
+    <color name="colorAccent">#ea6d81</color>
+    <color name="Cyan">#6dead6</color>
+    <color name="MelonPink">#ea6d81</color>
+    <color name="LightPink">#fbe5e9</color>
+    <color name="SoftGrey">#818181</color>
+</resources>
