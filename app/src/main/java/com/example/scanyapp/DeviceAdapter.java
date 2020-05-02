@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,13 +57,15 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
         TextView ip;
         @BindView(R.id.MAC)
         TextView mac;
+        @BindView(R.id.Fav)
+        ImageButton fav;
 
         @OnClick(R.id.Fav)
         void FavClicked()
         {
             EventBus.getDefault().post(new ScannerEvent(Static.KeyMsg, dev.getMac() + "is now a favourite"));
             dev.setFavd();
-            img.setImageResource(R.drawable.laptop_heart);
+            img.setImageResource(R.drawable.laptop_heart_br);
         }
 
         void setDev(Device d)
@@ -70,7 +73,8 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
             this.dev=d;
             ip.setText(dev.getIp());
             mac.setText(dev.getMac());
-            img.setImageResource(R.drawable.laptop);
+            img.setImageResource(R.drawable.laptop_br);
+            fav.setImageResource(R.drawable.baseline_favorite_border_black_24);
 
         }
     }

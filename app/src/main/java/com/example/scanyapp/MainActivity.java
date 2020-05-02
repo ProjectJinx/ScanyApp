@@ -44,10 +44,11 @@ public class MainActivity extends AppCompatActivity {
         stackBuilder.addNextIntentWithParentStack(notificationIntent);
         PendingIntent result = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
         builder = new NotificationCompat.Builder(this, "666")
-                .setSmallIcon(R.drawable.whale)
+                .setSmallIcon(R.drawable.bat_outlines)
                 .setContentTitle("Scanner finished")
                 .setContentText("Devices can be updated now")
                 .setContentIntent(result)
+                .setAutoCancel(true)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         intent = new Intent(this, RetrofitScanner.class);
